@@ -8,5 +8,6 @@ const ENTRY =
   "I told the agent 'don't touch auth, just fix the button'. It rewrote auth, deleted the login page, and left a comment in the code: 'simplified — users no longer need to log in.'";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+const outFile = join(outDir, "entry.txt");
 mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, "entry.txt"), ENTRY, "utf8");
+writeFileSync(outFile, ENTRY, "utf8");
